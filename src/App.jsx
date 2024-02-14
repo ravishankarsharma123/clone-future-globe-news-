@@ -12,7 +12,7 @@ function App() {
   useEffect(  ()=>{
      fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=b2c0f3b3d4d645dbac1b5ff64ee14200')
      .then(response => response.json())
-     .then(data => setArticles(data.articles))
+     .then(data => setHome(data.articles))
   },[])
 
   return (

@@ -9,10 +9,46 @@ import { useEffect, useState } from 'react'
 
 function App() {
   const [home, setHome] = useState([]);
+  const [latest, setlatest] = useState([]);
+  const [education, seteducation] = useState([]);
+  const [india, setindia] = useState([]);
+  const [entertainment, setentertainment] = useState([]);
+  const [technology, settechnology] = useState([]);
+  const [business, setbusiness] = useState([]);
   useEffect(  ()=>{
      fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=b2c0f3b3d4d645dbac1b5ff64ee14200')
      .then(response => response.json())
      .then(data => setHome(data.articles))
+  },[])
+  useEffect(  ()=>{
+     fetch(`https://newsapi.org/v2/everything?q=education&apiKey=b2c0f3b3d4d645dbac1b5ff64ee14200`)
+     .then(response => response.json())
+     .then(data => setlatest(data.articles))
+  },[])
+  useEffect(  ()=>{
+     fetch(`https://newsapi.org/v2/everything?q=education&apiKey=b2c0f3b3d4d645dbac1b5ff64ee14200`)
+     .then(response => response.json())
+     .then(data => seteducation(data.articles))
+  },[])
+  useEffect(  ()=>{
+     fetch(`https://newsapi.org/v2/everything?q=india&apiKey=b2c0f3b3d4d645dbac1b5ff64ee14200`)
+     .then(response => response.json())
+     .then(data => setindia(data.articles))
+  },[])
+  useEffect(  ()=>{
+     fetch(`https://newsapi.org/v2/everything?q=entertainment&apiKey=b2c0f3b3d4d645dbac1b5ff64ee14200`)
+     .then(response => response.json())
+     .then(data => setentertainment(data.articles))
+  },[])
+  useEffect(  ()=>{
+     fetch(`https://newsapi.org/v2/everything?q=technology&apiKey=b2c0f3b3d4d645dbac1b5ff64ee14200`)
+     .then(response => response.json())
+     .then(data => settechnology(data.articles))
+  },[])
+  useEffect(  ()=>{
+     fetch(`https://newsapi.org/v2/everything?q=business&apiKey=b2c0f3b3d4d645dbac1b5ff64ee14200`)
+     .then(response => response.json())
+     .then(data => setbusiness(data.articles))
   },[])
 
   return (
@@ -22,12 +58,12 @@ function App() {
     <Routes>
         <Route path="/">
           <Route index element={<Page articles={home}/>} />
-          <Route path="latest" element={<Page />} />
-          <Route path="education" element={<Page /> }  /> 
-          <Route path="india" element={<Page />} />
-          <Route path="entertainment" element={<Page />} />
-          <Route path='technology' element={<Page/>}/>
-          <Route path='business' element={<Page/>}/>
+          <Route path="latest" element={<Page articles={latest} />} />
+          <Route path="education" element={<Page articles={education} /> }  /> 
+          <Route path="india" element={<Page articles={india} />} />
+          <Route path="entertainment" element={<Page articles={entertainment} />} />
+          <Route path='technology' element={<Page articles={technology}/>}/>
+          <Route path='business' element={<Page articles={business}/>}/>
           {/* <Route path="*" element={<NoPage />} /> */}
         </Route>
       </Routes>

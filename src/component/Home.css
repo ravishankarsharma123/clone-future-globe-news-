@@ -1,0 +1,11 @@
+
+
+main{
+    display: flex;
+    width: 65%;
+    justify-content: center;
+    /* background-color: red; */
+    align-items: flex-start;
+    flex-direction: column;
+}
+

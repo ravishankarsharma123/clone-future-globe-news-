@@ -1,0 +1,41 @@
+.search-main{
+    padding: 40px;
+    background-color: #fff;
+
+}
+.search-main form{
+    width: 100%;
+    /* background-color: #e5a6a6; */
+}
+
+.search-main>form>label{
+    display: block;
+    font-size: 18px;
+
+}
+
+.input-div{
+    display: flex;
+    gap: 2%;
+}
+
+#search{
+    font-size: 16px;
+    width: 65%;
+    padding: 13px 20px;
+    background-color: #F7F8F9;
+    outline: none;
+    border: none;
+}
+
+#btn{
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    background-color: #3F4047;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 2px
+}

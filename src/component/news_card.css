@@ -1,0 +1,36 @@
+.card_main{
+    background-color: #fff;
+    width: 100%;
+    padding: 5%;
+    margin-bottom: 20px;
+}
+.title h2{
+    font-size: 35px;
+    font-weight: 400;
+}
+.title p{
+    font-size: 15px;
+}
+.body{
+    padding: 30px 0;
+}
+.body p{
+    font-size: 17px;
+    
+}
+.tags a{
+    font-size: 15px;
+    color: #1E73BE;
+
+}
+.tags img{
+    /* width: 40px; */
+    height: 25px;
+}
+
+.tags div{
+    display: flex;
+    align-items: center;
+    /* background-color: aqua; */
+    gap: 7px;
+}

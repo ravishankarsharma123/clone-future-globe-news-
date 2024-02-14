@@ -1,0 +1,11 @@
+.heading_main{
+    background-color: #fff;
+    width: 100%;
+    padding: 5%;
+    margin-bottom: 20px;
+}
+.heading_main>h2{
+    font-size: 40px;
+    font-weight: 400;
+
+}

@@ -4,10 +4,10 @@ import Heading  from "./Heading";
 import { useLoaderData } from "react-router-dom";
 
 export default function ({articles=[], heading=''}) {
-  // console.log(articles);
-  if(articles.length === 0){
-    // let data= useLoaderData();
-    // articles = data.articles;
+    let data = useLoaderData();
+    if (data) {
+      articles = data.articles;
+          
   }
   return (
     <main>
@@ -15,7 +15,7 @@ export default function ({articles=[], heading=''}) {
       {
         articles.map((article)=>{
 
-          return <Card title={article.title} author={article.source.name} date={article.publishedAt} body={article.description} />
+          return <Card key={article.title} title={article.title} author={article.source.name} date={article.publishedAt} body={article.description} />
         })
       }
     </main>

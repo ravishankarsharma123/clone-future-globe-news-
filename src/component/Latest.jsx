@@ -1,6 +1,8 @@
 import './Latest.css';
+import { Link } from 'react-router-dom';
 
 export default function({list=[]}){
+    
     return (
         <div className="latest_main">
             <h5>
@@ -10,10 +12,12 @@ export default function({list=[]}){
                 {
                     list.map((item)=>{
                         return(
-                           <a href="">
-                            {item}
-                           </a>
+                            <Link key={item.title} to ={''}>
+                                {item.title}
+                            </Link>
+
                         )
+                           
                     })
                 }
             </div>

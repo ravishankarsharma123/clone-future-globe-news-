@@ -16,7 +16,7 @@ export default function( {title= "This is a title",date="January 9, 2024",author
                     <img src="/folder.png" alt="" />
                     {
                         categories.map((cat)=>{
-                            return <a href={`/${cat}`}>{cat} </a>
+                            return <a key={cat} href={`/${cat}`}>{cat} </a>
                             
                         })
                     }
@@ -24,12 +24,12 @@ export default function( {title= "This is a title",date="January 9, 2024",author
                 <div className="tags">
                 
                     <img src="/tags.png" alt="" />
-                    { tags.map(tag => <a href={`/${tag}`}>{tag},</a>)}
+                    { tags.map(tag => <a key={tag} href={`/${tag}`}>{tag},</a>)}
                 </div>
                 <div className="comments">
                     <img src="/comments.png" alt="" />
                     {
-                        enableComments ?  <a href="#"> Leave a comment</a>:"comment are disabled " 
+                        enableComments ?  <a  href="#"> Leave a comment</a>:"comment are disabled " 
                         
                     }
                     

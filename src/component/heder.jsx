@@ -11,13 +11,13 @@ function Heder(){
                 </div>
                 <div className="nav">
                     <ul>
-                        <li><NavLink className={({ isActive, isPending })=>{return isActive?'active link':'link'}} to='/'>Home</NavLink></li>
-                        <li><NavLink className={({ isActive, isPending })=>{return isActive?'active link':'link'}} to='/latest'>Latest News</NavLink></li>
-                        <li><NavLink className={({ isActive, isPending })=>{return isActive?'active link':'link'}} to='/education'>Educaton</NavLink></li>
-                        <li><NavLink className={({ isActive, isPending })=>{return isActive?'active link':'link'}} to='/india'>India</NavLink></li>
-                        <li><NavLink className={({ isActive, isPending })=>{return isActive?'active link':'link'}} to='/entertainment'>Entertainment</NavLink></li>
-                        <li><NavLink className={({ isActive, isPending })=>{return isActive?'active link':'link'}} to='/technology'>Technology</NavLink></li>
-                        <li><NavLink className={({ isActive, isPending })=>{return isActive?'active link':'link'}} to='/business'>Business</NavLink></li>
+                        <li><NavLink className={({ isActive, isPending })=>{return isActive?'active':'link'}} to='/'>Home</NavLink></li>
+                        <li><NavLink className={({ isActive, isPending })=>{return isActive?'active':'link'}} to='/latest'>Latest News</NavLink></li>
+                        <li><NavLink className={({ isActive, isPending })=>{return isActive?'active':'link'}} to='/education'>Educaton</NavLink></li>
+                        <li><NavLink className={({ isActive, isPending })=>{return isActive?'active':'link'}} to='/india'>India</NavLink></li>
+                        <li><NavLink className={({ isActive, isPending })=>{return isActive?'active':'link'}} to='/entertainment'>Entertainment</NavLink></li>
+                        <li><NavLink className={({ isActive, isPending })=>{return isActive?'active':'link'}} to='/technology'>Technology</NavLink></li>
+                        <li><NavLink className={({ isActive, isPending })=>{return isActive?'active':'link'}} to='/business'>Business</NavLink></li>
                         <li>
                             <button>
                                 <img src={sIcon} alt="Search" />

@@ -53,6 +53,8 @@ header > div {
 }
 .nav ul .link:hover, .active {
     color: #1E73BE;
+    transition: color  0.2s ease;
+    text-decoration: none;
 }
 
 

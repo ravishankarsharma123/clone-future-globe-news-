@@ -7,6 +7,7 @@
 .latest_main>h5{
      font-size: 20px;
     font-weight: 400;
+    
 }
 .latest_main a{
     margin: 10px 0;
@@ -14,6 +15,9 @@
     color: #1E73BE;
     display: block;
     transition: 0.1s all ease-in-out;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .latest_main a:hover{
     color: #0e0d0d;
